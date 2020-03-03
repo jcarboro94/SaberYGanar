@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SaberYGanar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Y4t-RL-9nf">
+                                <rect key="frame" x="15" y="229" width="345" height="277.66666666666674"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="duV-V6-qof" userLabel="New Game">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="38"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5c-yj-oua">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="38"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                <state key="normal" title="New Game">
+                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="newGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xub-2x-0uW"/>
+                                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="egt-ff-7YQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dQ-58-iqK" userLabel="Time Left">
+                                        <rect key="frame" x="0.0" y="63" width="345" height="22"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oq2-AR-RWa">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Er7-eZ-T72" userLabel="Word">
+                                        <rect key="frame" x="0.0" y="110" width="345" height="33.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIN-J4-h0l" userLabel="Score">
+                                                <rect key="frame" x="0.0" y="6" width="115" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _ " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGX-ct-yVr">
+                                                <rect key="frame" x="115" y="0.0" width="115" height="33.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7cf-pd-Dck">
+                                                <rect key="frame" x="230" y="6" width="115" height="22"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <state key="normal" image="delete.left.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="deleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VJG-MS-0gA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="SiT-ya-FoY" userLabel="Check">
+                                        <rect key="frame" x="0.0" y="168.66666666666669" width="345" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DED-hl-BN8">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="34"/>
+                                                <state key="normal" title="✔️"/>
+                                                <connections>
+                                                    <action selector="checkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0kb-9Y-75D"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MM-6Z-lwX">
+                                        <rect key="frame" x="0.0" y="227.66666666666669" width="345" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-0X-o12">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
+                                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fyr-Rj-Jne">
+                                <rect key="frame" x="0.0" y="44" width="375" height="155"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Jt9-NS-JYe"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="H4b-tH-El2">
+                                    <size key="itemSize" width="64" height="58"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="10" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellIdentifier" id="0jw-zH-XRF" customClass="LetterViewCell" customModule="SaberYGanar" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="10" width="64" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="e3R-r1-0ul">
+                                            <rect key="frame" x="0.0" y="0.0" width="64" height="58"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKT-Yd-qOR">
+                                                    <rect key="frame" x="9" y="14" width="46" height="30"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="46" id="Ma6-5S-deu"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Qgr-oB-4C4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <state key="normal" title="A"/>
+                                                    <connections>
+                                                        <action selector="buttonLetter:" destination="DFm-S6-aSY" eventType="touchUpInside" id="6eB-nq-XhH"/>
+                                                        <action selector="letterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hc-Jr-IWG"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PKT-Yd-qOR" firstAttribute="centerY" secondItem="e3R-r1-0ul" secondAttribute="centerY" id="KAV-d4-SVg"/>
+                                                <constraint firstItem="PKT-Yd-qOR" firstAttribute="centerX" secondItem="e3R-r1-0ul" secondAttribute="centerX" id="YZC-L3-Bxm"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="64" height="58"/>
+                                        <connections>
+                                            <outlet property="buttonLetter" destination="PKT-Yd-qOR" id="NIk-J1-jQL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rng-DC-9Is"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="M2i-SB-I1E"/>
+                                </connections>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SH3-Vc-Xab">
+                                <rect key="frame" x="1" y="526" width="374" height="252"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" id="5qf-k8-S04">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5qf-k8-S04" id="XZr-uB-0qs" customClass="TableViewCell" customModule="SaberYGanar" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xar-vK-T0u">
+                                                    <rect key="frame" x="37" y="11" width="0.0" height="0.0"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="NY2-JD-DQr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="l7v-OC-yaG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y4t-RL-9nf" secondAttribute="trailing" constant="15" id="03P-JZ-8cc"/>
+                            <constraint firstItem="Y4t-RL-9nf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="11v-d7-bfv"/>
+                            <constraint firstItem="Fyr-Rj-Jne" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3mW-iN-7KX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fyr-Rj-Jne" secondAttribute="trailing" id="6a1-SR-h7b"/>
+                            <constraint firstItem="Y4t-RL-9nf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="IqI-1C-AuP"/>
+                            <constraint firstItem="Fyr-Rj-Jne" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nhu-ve-6g9"/>
+                            <constraint firstItem="Y4t-RL-9nf" firstAttribute="top" secondItem="Fyr-Rj-Jne" secondAttribute="bottom" constant="30" id="nwo-1N-3zh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="comprobacionLabel" destination="Hdf-0X-o12" id="Zoa-sR-yDF"/>
+                        <outlet property="palabraLabel" destination="JGX-ct-yVr" id="OSX-4P-HG4"/>
+                        <outlet property="scoreLabel" destination="oIN-J4-h0l" id="tbw-dX-QrI"/>
+                        <outlet property="startGameOutlet" destination="g5c-yj-oua" id="KeF-BB-eQw"/>
+                        <outlet property="timeLeftOutlet" destination="Oq2-AR-RWa" id="2SX-J0-Dzx"/>
+                        <outlet property="wordsTableView" destination="SH3-Vc-Xab" id="tCA-sO-9xm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="DFm-S6-aSY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="126.35467980295567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="delete.left.fill" catalog="system" width="64" height="52"/>
+    </resources>
+</document>
